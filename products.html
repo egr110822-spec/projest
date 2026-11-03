@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.International - Каталог Товаров</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo"><i class="fas fa-globe"></i> M.International</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="products.html" class="active">Каталог Товаров</a>
+            <a href="contacts.html">О нас и Контакты</a>
+        </nav>
+    </header>
+
+    <div class="page-banner">
+        <h1>Наша Продукция</h1>
+        <p>Эксклюзивная линейка для вашего здоровья, энергии и красоты.</p>
+    </div>
+
+    <section class="section">
+        <div class="products-grid">
+            
+            <!-- Товар 1: GreenMax -->
+            <div class="product-card">
+                <div class="product-img img1">
+                    <span class="badge">ПОПУЛЯРНОЕ</span>
+                </div>
+                <div class="product-content">
+                    <h3>GreenMax (ГринМакс)</h3>
+                    <p>Наш самый популярный продукт для глубокого очищения организма. Детокс кишечника, улучшение пищеварения, очищение печени и эффективная помощь при похудении.</p>
+                    <button class="wa-btn" onclick="orderProduct('GreenMax (ГринМакс)')">
+                        <i class="fab fa-whatsapp"></i> Заказать
+                    </button>
+                </div>
+            </div>
+
+            <!-- Товар 2: BluMax -->
+            <div class="product-card">
+                <div class="product-img img2">
+                    <span class="badge" style="background: #2196F3;">ЛИДЕР ПРОДАЖ</span>
+                </div>
+                <div class="product-content">
+                    <h3>BluMax (БлюМакс)</h3>
+                    <p>Антиоксидантный комплекс на основе сине-зеленых водорослей AFA. Очищает кровь, защищает клетки от свободных радикалов и поддерживает дыхательную систему.</p>
+                    <button class="wa-btn" onclick="orderProduct('BluMax (БлюМакс)')">
+                        <i class="fab fa-whatsapp"></i> Заказать
+                    </button>
+                </div>
+            </div>
+
+            <!-- Товар 3: MiMAX -->
+            <div class="product-card">
+                <div class="product-img img3"></div>
+                <div class="product-content">
+                    <h3>MiMAX (МиМакс)</h3>
+                    <p>Мощный витаминный комплекс с антиоксидантами. Направлен на общее омоложение организма, восстановление работы внутренних систем и защиту от стресса.</p>
+                    <button class="wa-btn" onclick="orderProduct('MiMAX (МиМакс)')">
+                        <i class="fab fa-whatsapp"></i> Заказать
+                    </button>
+                </div>
+            </div>
+
+            <!-- Товар 4: NutriMax -->
+            <div class="product-card">
+                <div class="product-img img4"></div>
+                <div class="product-content">
+                    <h3>NutriMax (НутриМакс)</h3>
+                    <p>Питательный фитнес-коктейль для восполнения дефицита белка, витаминов и минералов на клеточном уровне. Заменяет прием пищи и помогает в контроле веса.</p>
+                    <button class="wa-btn" onclick="orderProduct('NutriMax (НутриМакс)')">
+                        <i class="fab fa-whatsapp"></i> Заказать
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Товар 5: KordyMax -->
+            <div class="product-card">
+                <div class="product-img img5">
+                    <span class="badge" style="background: #ff9800;">ЭНЕРГИЯ</span>
+                </div>
+                <div class="product-content">
+                    <h3>KordyMax (КордиМакс)</h3>
+                    <p>Ботанический напиток из экстракта гриба кордицепса и ягод. Повышает физическую выносливость, быстро восстанавливает энергию и укрепляет защитные силы организма.</p>
+                    <button class="wa-btn" onclick="orderProduct('KordyMax (КордиМакс)')">
+                        <i class="fab fa-whatsapp"></i> Заказать
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h2>M.International</h2>
+                <p>Ваш проводник в мир инноваций. Мы работаем, чтобы ваш бизнес развивался быстрее, эффективнее и прибыльнее. Доверьтесь профессионалам.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Главная страница</a></li>
+                    <li><a href="products.html">Каталог продукции</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-icons">
+                    <a href="https://api.whatsapp.com/send?phone=77761751296" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/твой_профиль" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@m.international_asia" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@M.international.asia.m/videos" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 M.International. Все права защищены. Разработано специально для вас.
+        </div>
+    </footer>
+
+    <!-- JS логика -->
+    <script>
+        function orderProduct(itemName) {
+            const phone = '77761751296'; 
+            const message = `Здравствуйте! Меня заинтересовал товар из каталога: ${itemName}. Хочу оформить заказ.`;
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${encodedMessage}`, '_blank');
+        }
+    </script>
+</body>
+</html>

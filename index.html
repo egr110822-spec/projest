@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.International - Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fas fa-globe"></i> M.International
+        </div>
+        <nav>
+            <a href="index.html" class="active">Главная</a>
+            <a href="products.html">Каталог Товаров</a>
+            <a href="contacts.html">О нас и Контакты</a>
+        </nav>
+    </header>
+
+    <!-- Главный экран (Hero) -->
+    <section class="hero">
+        <h1>Инновации для вашего бизнеса и поддержание вашего организма в форме.</h1>
+        <p>Мы поставляем передовые решения, качественное оборудование и премиальные товары. M.International — ваш надежный партнер и помошник по здоровью.</p>
+        <button class="btn-primary" onclick="orderViaWhatsApp('Консультация с главной страницы')">Заказать товар прямо сейчас</button>
+    </section>
+
+    <!-- Секция О нас -->
+    <section class="section">
+        <h2 class="section-title">Почему выбирают нас?</h2>
+        <div class="about-grid">
+            <div class="about-image"></div>
+            <div class="about-text">
+                <h3>Глобальный охват, локальная экспертиза</h3>
+                <p>Компания <strong>M.International</strong> была основана с целью предоставлять клиентам лучшие мировые технологии и товары. Наш подход базируется на глубокой аналитике рынка, строгом контроле качества и безупречном клиентском сервисе.</p>
+                <p>Мы значительно расширили наш ассортимент, чтобы закрыть любые потребности вашего бизнеса. От электроники до специализированного оборудования — мы гарантируем надежность каждой поставки.</p>
+                <p>Наша миссия — сделать инновации доступными, а бизнес наших партнеров — эффективным и прибыльным.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Информационные блоки -->
+    <section class="section" style="background-color: #f0ecf6;">
+        <h2 class="section-title">Наши преимущества</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <i class="fas fa-shipping-fast"></i>
+                <h4>Быстрая логистика</h4>
+                <p>Оптимизированные маршруты доставки позволяют нам привозить товары в кратчайшие сроки.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Гарантия качества</h4>
+                <p>Все товары проходят многоуровневую проверку перед отправкой клиенту.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-headset"></i>
+                <h4>Поддержка 24/7</h4>
+                <p>Наши специалисты всегда на связи для решения любых ваших вопросов.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-handshake"></i>
+                <h4>Надежное партнерство</h4>
+                <p>Мы строим долгосрочные отношения, основанные на доверии и прозрачности.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h2>M.International</h2>
+                <p>Ваш проводник в мир инноваций. Мы работаем, чтобы ваш бизнес развивался быстрее, эффективнее и прибыльнее.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Навигация</h3>
+                <ul>
+                    <li><a href="index.html">Главная страница</a></li>
+                    <li><a href="products.html">Каталог продукции</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-icons">
+                    <a href="https://api.whatsapp.com/send?phone=77761751296" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/твой_профиль" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@m.international_asia" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@M.international.asia.m/videos" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 M.International. Все права защищены. Разработано специально для вас.
+        </div>
+    </footer>
+
+    <!-- Скрипт редиректа -->
+   <script>
+        function orderViaWhatsApp(itemName) {
+            const phone = '77057487486'; // Исправлен код страны на 7
+            const message = `Здравствуйте! Я хочу связатся с вами по поводу  ${itemName}. Расскажите подробнее.`;
+            const encodedMessage = encodeURIComponent(message);
+            // Используем window.open для открытия в новой вкладке
+            window.open(`https://api.whatsapp.com/send?phone=${phone}&text=${encodedMessage}`, '_blank');
+        }
+    </script>
+</body>
+</html>

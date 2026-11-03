@@ -1,0 +1,466 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap');
+
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Верхняя полоса (Топ-бар) */
+.top-bar {
+    background-color: #2c0b56;
+    color: #d1c4e9;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.top-bar-info span {
+    margin-right: 20px;
+}
+
+.social-icons a {
+    color: #d1c4e9;
+    margin-left: 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Навигация */
+.navbar {
+    background-color: #ffffff;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: #4a148c;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar nav a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #4a148c;
+}
+
+.navbar nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #4a148c;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.navbar nav a:hover::after,
+.navbar nav a.active::after {
+    width: 100%;
+}
+
+/* Герой-баннер на главной */
+.hero {
+    height: 80vh;
+    min-height: 600px;
+    background: linear-gradient(135deg, rgba(74, 20, 140, 0.85) 0%, rgba(26, 3, 58, 0.85) 100%), url('25861d09-ee62-4b6d-98e8-bf1f91cf16e4.png') center/cover no-repeat fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    animation: fadeInDown 1s ease;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    animation: fadeInUp 1s ease 0.3s forwards;
+    opacity: 0;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #7b1fa2, #4a148c);
+    color: #fff;
+    padding: 18px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(74, 20, 140, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    animation: fadeInUp 1s ease 0.6s forwards;
+    opacity: 0;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(74, 20, 140, 0.4);
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Заголовки страниц (не главная) */
+.page-banner {
+    background: linear-gradient(45deg, #4a148c, #7b1fa2);
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.page-banner h1 {
+    font-size: 3rem;
+}
+
+/* Основные секции */
+.section {
+    padding: 80px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-title {
+    text-align: center;
+    color: #4a148c;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #7b1fa2;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* О нас - Grid */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    color: #2c0b56;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-image {
+    background: url('https://www.kt.kz/neofiles/serve-image/6a76cb5d58464e00677e56b2/738x473/c1') center/cover;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Преимущества / Инфо блоки */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.feature-box {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    border-bottom: 5px solid transparent;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    border-bottom: 5px solid #4a148c;
+}
+
+.feature-box i {
+    font-size: 3rem;
+    color: #4a148c;
+    margin-bottom: 20px;
+}
+
+.feature-box h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* Каталог товаров */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(74, 20, 140, 0.15);
+}
+
+.product-img {
+    height: 250px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    font-size: 1.2rem;
+    position: relative;
+}
+.product-img.img1 { background: url('https://resources.cdn-kaspi.kz/img/m/p/hed/h4c/85075999227934.jpg?format=gallery-large') center/cover; }
+.product-img.img2 { background: url('https://images.satu.kz/220689619_w640_h640_blumax-blyumaks-dlya.jpg') center/cover; }
+.product-img.img3 { background: url('https://resources.cdn-kaspi.kz/img/m/p/h29/h58/85083833368606.jpg?format=gallery-large') center/cover; }
+.product-img.img4 { background: url('https://images.satu.kz/240286501_w1280_h640_nutrimax-nutrimaks-.jpg') center/cover; }
+.product-img.img5 { background: url('https://sun9-36.userapi.com/impg/8Pxf2gi0iKBeKbOdBLLMCGRmcKspTIujUWDOig/YQ1Iez6jqNM.jpg?crop=0,0,1,1&size=0x400&quality=95&sign=d71cf7d1b184e5dcf2194d80f64e634c&c_uniq_tag=ZjLbnwui6HoDuZcCyyqjRo3Q2pWpW4MsLfK4oH6xyy8') center/cover; }
+.product-img.img6 { background: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=600&auto=format&fit=crop') center/cover; }
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e91e63;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.product-content {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-content h3 {
+    color: #2c0b56;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-content p {
+    color: #666;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.wa-btn {
+    background-color: #25D366; /* Цвет вацап */
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.wa-btn:hover {
+    background-color: #1ebe55;
+}
+
+/* Контакты */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info-block {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #4a148c;
+    margin-right: 20px;
+    background: #f3e5f5;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.contact-item h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #666;
+}
+
+.map-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: 100%;
+    min-height: 400px;
+    background: #e0e0e0;
+    position: relative;
+}
+
+/* Футер */
+footer {
+    background-color: #1a0530;
+    color: #aaa;
+    padding: 60px 50px 20px;
+    margin-top: auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    border-bottom: 1px solid #333;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-about h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-links h3, .footer-social h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #d1c4e9;
+}
+
+.footer-social .social-icons a {
+    font-size: 1.5rem;
+    margin-left: 0;
+    margin-right: 15px;
+    background: rgba(255,255,255,0.1);
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+}
